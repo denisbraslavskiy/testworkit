@@ -1,0 +1,31 @@
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+     <!--Sidebar content-->
+
+      <input ng-model="query" class="form-control" placeholder="Search...">
+     <p>Total number of guitars: {{guitars.length}}</p>
+     Sort by:
+        <select ng-model="orderProp" class="form-control">
+          <option value="name">Alphabetical</option>
+          <option value="">Newest</option>
+        </select>
+   </div>
+   <div class="col-md-10">
+     <!--Body content-->
+
+     <ul class="guitars">
+       <li ng-repeat="guitar in guitars | filter:query | orderBy:orderProp" class ="thumbnail">
+            <a href="#/guitars/{{guitar.id}}" class="thumb"><img ng-src="{{guitar.images[0]}}"></a>
+            <a href="#/guitars/{{guitar.id}}">{{guitar.name}}</a>
+            <p>{{guitar.price}}</p>
+            <!-- <p>{{guitar.model}}</p>
+            <p>{{guitar.manufacturer}}</p>
+            <p>{{guitar.type}}</p> -->
+       </li>
+     </ul>
+
+   </div>
+ </div>
+</div>

@@ -1,0 +1,9 @@
+
+<uib-carousel interval="carousel.interval" class="carousel-demo">
+        <uib-slide ng-repeat="slide in carousel.slides" active="slide.active">
+          <img class="imgslide" ng-src="{{slide.image}}">
+          <div class="carousel-caption">
+            <h4>{{slide.text}}</h4>
+          </div>
+        </uib-slide>
+</uib-carousel>

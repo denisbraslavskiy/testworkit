@@ -1,0 +1,89 @@
+<!-- <div class="form-group">
+      <label for="id" class="col-sm-2 control-label">Guitar id</label>
+      <div class="col-sm-10">
+          <input type="text" ng-model="guitar.id" class="form-control" id="id" placeholder="Guitar id here"/>
+      </div>
+  </div> -->
+  <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">Name</label>
+      <div class="col-sm-10">
+          <input type="text" ng-model="guitar.name" class="form-control" id="name" placeholder="Guitar name here"/>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="type" class="col-sm-2 control-label">Type</label>
+      <div class="col-sm-10">
+        <select ng-model="guitar.type" class="form-control">
+          <option value="" disabled selected>Guitar type here</option>
+          <option value="Electric guitar">Electric guitar</option>
+          <option value="Acoustic guitar">Acoustic guitar</option>
+        </select>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="manufacturer" class="col-sm-2 control-label">Manufacturer</label>
+      <div class="col-sm-10">
+          <input type="text" ng-model="guitar.manufacturer" class="form-control" id="manufacturer" placeholder="Guitar manufacturer here"/>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="model" class="col-sm-2 control-label">Model</label>
+      <div class="col-sm-10">
+          <input type="text" ng-model="guitar.model" class="form-control" id="model" placeholder="Guitar model here"/>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="bodymaterial" class="col-sm-2 control-label">Body material</label>
+      <div class="col-sm-10">
+          <input type="text" ng-model="guitar.bodymaterial" class="form-control" id="bodymaterial" placeholder="Guitar body material here"/>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="neckmaterial" class="col-sm-2 control-label">Neck material</label>
+      <div class="col-sm-10">
+          <input type="text" ng-model="guitar.neckmaterial" class="form-control" id="neckmaterial" placeholder="Guitar neck material here"/>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="colour" class="col-sm-2 control-label">Colour</label>
+      <div class="col-sm-10">
+          <input type="text" ng-model="guitar.colour" class="form-control" id="colour" placeholder="Guitar colour here"/>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="price" class="col-sm-2 control-label">Price</label>
+      <div class="col-sm-10">
+          <input type="text" ng-model="guitar.price" class="form-control" id="price" placeholder="Guitar price here"/>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="description" class="col-sm-2 control-label">Description</label>
+      <div class="col-sm-10">
+          <input type="text" ng-model="guitar.description" class="form-control" id="description" placeholder="Guitar description here"/>
+      </div>
+  </div>
+  <!-- <div class="form-group">
+      <label for="url" class="col-sm-2 control-label">URL</label>
+      <div class="col-sm-10">
+          <input type="text" ng-model="guitar.images" class="form-control" id="url" placeholder="Guitar description here"/>
+      </div>
+  </div> -->
+<!-- <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" class="btn btn-primary" ng-click="updateGuitar()" value="Save"/>
+    </div>
+</div> -->
+
+<div class="col-sm-offset-2 col-sm-10">
+  <div class="addbuttons">
+  <button type="file" ngf-select="upload($file)" class="btn btn-primary">
+      Select File</button>
+    <input type="submit" class="btn btn-danger" ng-click="updateGuitar()" value="Save"/>
+</div>
+<div data-ng-show="showError" ng-class="{fade:doFade}" class="{{alertType}}" style="
+    margin-left: 500px;
+    margin-top: 80px;
+    padding: 25px;
+"><strong>{{errorMessage}}</strong></div>
+</div>

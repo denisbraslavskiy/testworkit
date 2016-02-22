@@ -1,0 +1,58 @@
+  <!doctype html>
+<html lang="en" ng-app="guitarshopApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testwork</title>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-resource/angular-resource.js"></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
+  <script src="/bower_components/ng-file-upload/ng-file-upload-shim.js"></script>
+  <script src="/bower_components/ng-file-upload/ng-file-upload.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/app.css">
+  <script src="javascripts/app.js"></script>
+  <script src="javascripts/controllers.js"></script>
+  <script src="javascripts/filters.js"></script>
+  <script src="javascripts/services.js"></script>
+
+</head>
+  <body>
+
+      <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <a href="http://do-it.co/" class="logo" style = "
+        background-size: 100%;
+        height: 40px;
+        float: left;
+        margin-top: 5px;
+        width: 40px;
+        margin-left: 30px;"></a>
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Testwork</a>
+        </div>
+      <div class="navbar-collapse collapse" ng-controller="HeaderController">
+        <ul class="nav navbar-nav">
+          <li ng-class="{ active: isActive('/home')}"><a href="#/home">Home</a></li>
+          <li ng-class="{ active: isActive('/guitars-list')}"><a href="#/guitars-list">Catalog</a></li>
+          <li ng-class="{ active: isActive('/admin')}"><a href="#/admin">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div ng-view autoscroll ="1">  </div>
+ <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+<img ng-src="{{mainImageUrl}}" class="guitar">
+<h1>{{guitar.name}}</h1>
+
+<p>{{guitar.description}}</p>
+
+<ul class="guitar-thumbs">
+  <li ng-repeat="img in guitar.images">
+    <img ng-src="{{img}}" ng-click="setImage(img)">
+  </li>
+</ul>
+    <dd class="tab-container">
+        <div class="tab-content">
+	         <div class="data-table" id="specification_table_or_list">
+		           <table>
+                 <tbody>
+                   <tr><td>Manufacturer:</td><td>{{guitar.manufacturer}}</td></tr>
+                   <tr><td>Model Name:</td><td>{{guitar.model}}</td></tr>
+                   <tr><td>Guitar type:</td><td>{{guitar.type}}</td></tr>
+                   <tr><td>Colour:</td><td>{{guitar.colour}}</td></tr>
+                   <tr><td>Body Material:</td><td>{{guitar.bodymaterial}}</td></tr>
+                   <tr><td>Neck Material:</td><td>{{guitar.neckmaterial}}</td></tr>
+                 </tbody>
+               </table>
+             </div>
+           </div>
+        </dd>
