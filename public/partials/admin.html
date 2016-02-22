@@ -11,13 +11,18 @@
           <option value="name">Alphabetical</option>
           <option value="">Newest</option>
         </select>
+        <select ng-model="search.type" class="form-control">
+          <option value = "">All</option>
+          <option value="Electric guitar">Electric guitar</option>
+          <option value="Acoustic guitar">Acoustic guitar</option>
+        </select>
         <a class="btn btn-primary" href="#/guitars/add/newguitar" style="margin-top:10px;">Add new guitar</a>
    </div>
    <div class="col-md-10">
      <!--Body content-->
 
      <ul class="guitars">
-       <li ng-repeat="guitar in guitars | filter:query | orderBy:orderProp" class ="thumbnail">
+       <li ng-repeat="guitar in guitars | filter:query | filter:search.type | orderBy:orderProp" class ="thumbnail">
             <a href="#/guitars/{{guitar.id}}" class="thumb"><img ng-src="{{guitar.images[0]}}"></a>
             <a href="#/guitars/{{guitar.id}}">{{guitar.name}}</a>
             <p>{{guitar.snippet}}</p>
